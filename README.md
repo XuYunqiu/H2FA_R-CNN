@@ -16,7 +16,7 @@ If you find this project useful for your research, please use the following BibT
 @inproceedings{xu2022h2fa,
   title={{H$^2$FA R-CNN}: Holistic and Hierarchical Feature Alignment for Cross-domain Weakly Supervised Object Detection},
   author={Xu, Yunqiu and Sun, Yifan and Yang, Zongxin and Miao, Jiaxu and Yang, Yi},
-  booktitle ={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  booktitle ={Proceedings of IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2022},
 }
 ```
