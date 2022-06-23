@@ -1,0 +1,22 @@
+Clipart_train
+681633840: img shape (213,300), anno shape (594, 600)
+
+Watercolor_extra
+201680973: img shape (600,1049), anno shape (1049, 600)
+205790437: img shape (600,680), anno shape (680, 600)
+205790441: img shape (600,821), anno shape (821, 600)
+2540805: img shape (417,278), anno shape (278, 417)
+139289921: img shape (600,912), anno shape (912, 600)
+188749165: img shape (600,800), anno shape (800, 600)
+139407879: img shape (600,450), anno shape (450, 600)
+139286761: img shape (600,885), anno shape (885, 600)
+248375223: img shape (600,800), anno shape (800, 600)
+88117743: img shape (600,803), anno shape (803, 600)
+117854017: img shape (600,803), anno shape (803, 600)
+105442265: img shape (600,931), anno shape (931, 600)
+117846309: img shape (600,828), anno shape (828, 600)
+
+Comic_extra
+1050303: img shape (600,800), anno shape (800, 600)
+124368499: img shape (600,924), anno shape (924, 600)
+228540871: img shape (600,849), anno shape (849, 600)
