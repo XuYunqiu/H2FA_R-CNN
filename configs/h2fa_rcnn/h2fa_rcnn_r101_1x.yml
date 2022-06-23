@@ -1,0 +1,17 @@
+_BASE_: [
+    '../datasets/cdod.yml',
+    '../runtime.yml',
+    '_base_/optimizer_1x.yml',
+    '_base_/h2fa_rcnn_r101.yml',
+    '_base_/reader.yml',
+]
+
+pretrain_weights: https://paddledet.bj.bcebos.com/models/pretrained/ResNet101_pretrained.pdparams
+weights: output/h2fa_rcnn_r101_1x/model_final
+
+H2FARCNN:
+  backbone: DC5ResNet
+  rpn_head: IIRRPNHead
+  bbox_head: IIRBBoxHead
+  # post process
+  bbox_post_process: BBoxPostProcess
