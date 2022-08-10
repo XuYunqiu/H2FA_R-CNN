@@ -29,15 +29,17 @@ python -m pip install -e .
 
 
 ## Data Preparation
-* Download source domain (PASCAL VOC 07 and 12) datasets from [PASCAL VOC](http://host.robots.ox.ac.uk/pascal/VOC/)
+* Download PASCAL VOC 07 and 12 datasets from [PASCAL VOC](http://host.robots.ox.ac.uk/pascal/VOC/)
 
-* Download target domain (Clipart, Watercolor and Comic) datasets from [cross domain detection](https://github.com/naoto0804/cross-domain-detection/tree/master/datasets)
+* Download Clipart, Watercolor and Comic datasets from [cross domain detection](https://github.com/naoto0804/cross-domain-detection/tree/master/datasets)
+
+* Download Cityscapes and Fogy Cityscapes datasets from [da-faster-rcnn-PyTorch](https://github.com/tiancity-NJU/da-faster-rcnn-PyTorch)
 
 For a few datasets that H<sup>2</sup>FA R-CNN natively supports, the datasets are assumed to exist in a directory called "datasets/", under the directory where you launch the program. They need to have the following directory structure:
 ```
 DETECTRON2_DATASETS/
 ├── results
-└── {VOC2007,VOC2012,Clipart,Watercolor,Comic}/
+└── {VOC2007,VOC2012,Clipart,Watercolor,Comic,fogycityscapes}/
     ├── Annotations/
     ├── ImageSets/
     └── JPEGImages/
@@ -124,6 +126,13 @@ Pre-trained models with R101-DC5 backbone on six datasets are available. All our
 <td align="center">53.0</td>
 <td align="center"><a href="https://drive.google.com/file/d/1Q4y-SpSG_UqtkEuXrjnfv4u8JFW4L5OW/view?usp=sharing">Google Drive</a>&nbsp;|&nbsp;<a href="https://pan.baidu.com/s/1j4SwEWGD6_Cww7lg5haj2Q?pwd=948v">Baidu Pan</a></td>
 <td align="center"><a href="https://drive.google.com/file/d/1cz6iZG3rLlgBW6emGuxZ7zdmv2et5zKe/view?usp=sharing">Google Drive</a>&nbsp;|&nbsp;<a href="https://pan.baidu.com/s/11A21nT463cYepfFvZXSGmw?pwd=oo04">Baidu Pan</a></td>
+</tr>
+
+<tr><td align="left"><a href="configs/CrossDomain-Detection/h2fa_rcnn_R_101_DC5_foggycityscapes.yaml">Cityscapes -> Foggy Cityscapes</a></td>
+<td align="center">24k</td>
+<td align="center">47.4</td>
+<td align="center"><a href="https://drive.google.com/file/d/1SyaGUQsMrFwDUMh8kKU6vDubqFvM220v/view?usp=sharing">Google Drive</a>&nbsp;|&nbsp;<a href="https://pan.baidu.com/s/1b_U-R8jubKtGj2ySSJ-DbQ?pwd=1hur">Baidu Pan</a></td>
+<td align="center"><a href="https://drive.google.com/file/d/1nFol3Ul2PqXe3PW90M65YS1lGXW6nQp_/view?usp=sharing">Google Drive</a>&nbsp;|&nbsp;<a href="https://pan.baidu.com/s/1dVcVVgxUebUrbsqv1Ovxzg?pwd=uo38">Baidu Pan</a></td>
 </tr>
 
 <!-- END OF TABLE BODY -->

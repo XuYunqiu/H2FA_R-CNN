@@ -14,15 +14,15 @@ from detectron2.data import MetadataCatalog, DatasetCatalog
 from detectron2.structures import BoxMode
 
 
-# fmt: off
 CLASS_NAMES_20 = [
     "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat",
     "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person",
     "pottedplant", "sheep", "sofa", "train", "tvmonitor"
 ]
-# fmt: on
 
 CLASS_NAMES_6 = ["bicycle", "bird", "car", "cat", "dog", "person"]
+
+CLASS_NAMES_8 =["person", "rider", "car", "truck", "bus", "train", "motorcycle", "bicycle"]
 
 
 def load_cdod_voc_instances(dirname: str, split: str, class_names: Union[List[str], Tuple[str, ...]]):
@@ -112,9 +112,17 @@ def register_all_cdod_datasets(root):
         ("comic2k_train", "comic", "train"),
         ("comic2k_test", "comic", "test"),
         ("comic2k_extra", "comic", "extra"),
+        ("fogycityscapes_source", "fogycityscapes", "train_s"),
+        ("fogycityscapes_target", "fogycityscapes", "train_t"),
+        ("fogycityscapes_test", "fogycityscapes", "test_t"),
     ]
     for name, dirname, split in SPLITS:
-        class_name = CLASS_NAMES_20 if '1k' in name else CLASS_NAMES_6
+        if '1k' in name:
+            class_name = CLASS_NAMES_20
+        elif '2k' in name:
+            class_name = CLASS_NAMES_6
+        else:
+            class_name = CLASS_NAMES_8
         register_cdod_dataset(name, os.path.join(root, dirname), split, class_name)
         MetadataCatalog.get(name).evaluator_type = "cross_domain"
 
