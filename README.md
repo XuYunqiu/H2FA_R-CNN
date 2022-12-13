@@ -62,7 +62,7 @@ The configs are made for 2-GPU training. To train on 1 GPU, you may need to chan
 ```
 python train_net.py \
   --config-file ../configs/CrossDomain-Detection/h2fa_rcnn_R_101_DC5_clipartall.yaml \
-  --num-gpus 1 SOLVER.IMS_PER_BATCH 2 SOLVER.BASE_LR 0.0025
+  --num-gpus 1 SOLVER.IMS_PER_BATCH 2 SOLVER.BASE_LR 0.0025 SOLVER.STEPS 32000,43000 SOLVER.MAX_ITER 48000
 ```
 
 To evaluate the trained models, use
@@ -73,7 +73,7 @@ To evaluate the trained models, use
 ```
 
 ## Main Results with Pre-trained Models
-Pre-trained models with R101-DC5 backbone on six datasets are available. All our models are trained on 2 NVIDIA V100-32G GPUs. 
+Pre-trained models with R101-DC5 backbone on seven datasets are available. All our models are trained on 2 NVIDIA V100-32G GPUs. 
 
 
 <table><tbody>
