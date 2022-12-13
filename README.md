@@ -62,7 +62,7 @@ The configs are made for 2-GPU training. To train on 1 GPU, you may need to chan
 ```
 python train_net.py \
   --config-file ../configs/CrossDomain-Detection/h2fa_rcnn_R_101_DC5_clipartall.yaml \
-  --num-gpus 1 SOLVER.IMS_PER_BATCH 2 SOLVER.BASE_LR 0.0025 SOLVER.STEPS 32000,43000 SOLVER.MAX_ITER 48000
+  --num-gpus 1 SOLVER.IMS_PER_BATCH 2 SOLVER.BASE_LR 0.0025 SOLVER.STEPS 48000,64000 SOLVER.MAX_ITER 72000
 ```
 
 To evaluate the trained models, use
