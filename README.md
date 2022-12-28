@@ -67,7 +67,7 @@ python train_net.py \
 
 To evaluate the trained models, use
 ```
-./train_net.py \
+python train_net.py \
   --config-file ../configs/CrossDomain-Detection/h2fa_rcnn_R_101_DC5_clipartall.yaml \
   --eval-only MODEL.WEIGHTS /path/to/checkpoint_file
 ```
