@@ -68,9 +68,11 @@ python train_net.py \
 To evaluate the trained models, use
 ```
 ./train_net.py \
-  --config-file ../configs/PascalVOC-Detection/cdod_faster_rcnn_R_101_DC5.yaml \
+  --config-file ../configs/CrossDomain-Detection/h2fa_rcnn_R_101_DC5_clipartall.yaml \
   --eval-only MODEL.WEIGHTS /path/to/checkpoint_file
 ```
+
+Note, the above command lines are a simple example for VOC -> Clipart<sub>all</sub> adaptation. You can change the config file for other datasets.
 
 ## Main Results with Pre-trained Models
 Pre-trained models with R101-DC5 backbone on seven datasets are available. All our models are trained on 2 NVIDIA V100-32G GPUs. 
